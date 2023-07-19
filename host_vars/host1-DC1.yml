@@ -1,0 +1,39 @@
+static_routes:
+- vrf: default
+  destination_address_prefix: 10.1.20.0/24
+  gateway: 10.1.10.1
+ethernet_interfaces:
+  Ethernet1:
+    description: Port Channel1 member
+    type: port-channel-member
+    shutdown: false
+    channel_group:
+      id: 1
+      mode: active
+  Ethernet2:
+    description: Port Channel1 member
+    type: port-channel-member
+    shutdown: false
+    channel_group:
+      id: 1
+      mode: active
+  Ethernet3:
+    description: Port Channel1 member
+    type: port-channel-member
+    shutdown: false
+    channel_group:
+      id: 1
+      mode: active
+  Ethernet4:
+    description: Port Channel1 member
+    type: port-channel-member
+    shutdown: false
+    channel_group:
+      id: 1
+      mode: active
+port_channel_interfaces:
+  Port-Channel1:
+    description: LAG to leaf1-DC1 and leaf2-DC1
+    type: routed
+    shutdown: false
+    ip_address: 10.1.10.11/24

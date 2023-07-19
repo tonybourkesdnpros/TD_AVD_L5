@@ -7,7 +7,7 @@ all:
           ansible_httpapi_host: 192.168.0.5
           ansible_host: 192.168.0.5
           ansible_user: arista
-          ansible_password: aristazly9
+          ansible_password: aristak6in
           ansible_connection: httpapi
           ansible_httpapi_use_ssl: True
           ansible_httpapi_validate_certs: False
@@ -16,44 +16,49 @@ all:
     FABRIC:
       vars:
         ansible_user: arista
-        ansible_ssh_pass: aristazly9 # If using SSH keys, this can be removed
-# Use this section if you want to perform testing via the eAPI
-        # ansible_connection: httpapi
-        # ansible_httpapi_use_ssl: True
-        # ansible_httpapi_validate_certs: False
-        # ansible_network_os: eos
-        # ansible_httpapi_port: 443
-# Use this section if you want to perform testing via the CLI through SSH
-        ansible_connection: network_cli
+        ansible_password: aristak6in
+        ansible_connection: httpapi
+        ansible_httpapi_use_ssl: True
+        ansible_httpapi_validate_certs: False
         ansible_network_os: eos
-        # ansible_become: yes
-        # ansible_become_method: enable
+        ansible_httpapi_port: 443
+        ansible_become: yes
+        ansible_become_method: enable
       children:
-        SPINES:
-          vars:
-            type: spine
-          hosts:
-            spine1:
-              ansible_host: 192.168.0.11
-            spine2:
-              ansible_host: 192.168.0.12
-            spine3:
-              ansible_host: 192.168.0.13
-        LEAFS:
-          vars: 
-            type: l3leaf
-          hosts:
-            leaf1:
-              ansible_host: 192.168.0.21
-            leaf2:
-              ansible_host: 192.168.0.22
-            leaf3:
-              ansible_host: 192.168.0.23
-            leaf4:
-              ansible_host: 192.168.0.24
+        DC1:
+          children:
+            SPINES_DC1:
+              vars:
+                type: spine
+              hosts:
+                spine1-DC1:
+                  ansible_host: 192.168.0.11
+                spine2-DC1:
+                  ansible_host: 192.168.0.12
+                spine3-DC1: 
+                  ansible_host: 192.168.0.13
+            LEAFS_DC1:
+              vars: 
+                type: l3leaf
+              hosts:
+                leaf1-DC1:
+                  ansible_host: 192.168.0.21
+                leaf2-DC1:
+                  ansible_host: 192.168.0.22
+                leaf3-DC1:
+                  ansible_host: 192.168.0.23
+                leaf4-DC1:
+                  ansible_host: 192.168.0.24
+
+
         EVPN_SERVICES:
           children:
-            LEAFS:
-        HOST_CONNECT:
+            LEAFS_DC1:
+        ENDPOINT_CONNECT:
           children:
-            LEAFS:
+            LEAFS_DC1:
+    HOSTS_DC1:
+      hosts:  
+        host1-DC1:
+        host2-DC1:
+

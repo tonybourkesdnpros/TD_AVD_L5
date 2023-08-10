@@ -1,5 +1,5 @@
 ---
-CVP_DEVICES:
+cvp_devices:
   - fqdn: leaf1-DC1
     parentContainerName: LEAFS_DC1
     configlets:
@@ -28,12 +28,8 @@ CVP_DEVICES:
     parentContainerName: SPINES_DC1
     configlets:
       - AVD_spine3-DC1
-CVP_CONTAINERS:
+cvp_containers:
   DC1:
-    parentContainerName: FABRIC
-  ENDPOINT_CONNECT:
-    parentContainerName: FABRIC
-  EVPN_SERVICES:
     parentContainerName: FABRIC
   FABRIC:
     parentContainerName: Tenant

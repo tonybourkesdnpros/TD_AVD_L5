@@ -51,12 +51,12 @@ all:
                   ansible_host: 192.168.0.24
 
 
-        EVPN_SERVICES:
-          children:
-            LEAFS_DC1:
-        ENDPOINT_CONNECT:
-          children:
-            LEAFS_DC1:
+    EVPN_SERVICES:
+      children:
+        LEAFS_DC1:
+    ENDPOINT_CONNECT:
+      children:
+        LEAFS_DC1:
     HOSTS_DC1:
       hosts:  
         host1-DC1:

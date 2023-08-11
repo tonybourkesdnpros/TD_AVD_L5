@@ -7,7 +7,7 @@ all:
           ansible_httpapi_host: 192.168.0.5
           ansible_host: 192.168.0.5
           ansible_user: arista
-          ansible_password: aristak6in
+          ansible_password: aristacj5a
           ansible_connection: httpapi
           ansible_httpapi_use_ssl: True
           ansible_httpapi_validate_certs: False
@@ -16,7 +16,7 @@ all:
     FABRIC:
       vars:
         ansible_user: arista
-        ansible_password: aristak6in
+        ansible_password: aristacj5a
         ansible_connection: httpapi
         ansible_httpapi_use_ssl: True
         ansible_httpapi_validate_certs: False
@@ -49,16 +49,54 @@ all:
                   ansible_host: 192.168.0.23
                 leaf4-DC1:
                   ansible_host: 192.168.0.24
-
-
+                borderleaf1-DC1:
+                  ansible_host: 192.168.0.25
+                borderleaf2-DC1:  
+                  ansible_host: 192.168.0.26
+        DC2:
+          children:
+            SPINES_DC2:
+              vars:
+                type: spine
+              hosts:
+                spine1-DC2:
+                  ansible_host: 192.168.0.14
+                spine2-DC2:
+                  ansible_host: 192.168.0.15
+                spine3-DC2: 
+                  ansible_host: 192.168.0.16
+            LEAFS_DC2:
+              vars: 
+                type: l3leaf
+              hosts:
+                leaf1-DC2:
+                  ansible_host: 192.168.0.31
+                leaf2-DC2:
+                  ansible_host: 192.168.0.32
+                leaf3-DC2:
+                  ansible_host: 192.168.0.33
+                leaf4-DC2:
+                  ansible_host: 192.168.0.34
+                borderleaf1-DC2:
+                  ansible_host: 192.168.0.35
+                borderleaf2-DC2:
+                  ansible_host: 192.168.0.36
     EVPN_SERVICES:
       children:
         LEAFS_DC1:
+        LEAFS_DC2:
     ENDPOINT_CONNECT:
       children:
         LEAFS_DC1:
+        LEAFS_DC2:
     HOSTS_DC1:
       hosts:  
         host1-DC1:
         host2-DC1:
-
+    HOSTS_DC2:
+      hosts:  
+        host1-DC2:
+        host2-DC2:
+    DCI_Group:
+      hosts:
+        DCI:

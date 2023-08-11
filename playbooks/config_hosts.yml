@@ -6,14 +6,56 @@
       import_role:
         name: arista.avd.eos_cli_config_gen
 
-- name: Deploy fabric to CVP
+- name: Configure hosts
+  hosts: HOSTS_DC2
+  tasks:
+    - name: Generate Device Configurations and Documentation
+      import_role:
+        name: arista.avd.eos_cli_config_gen
+
+- name: Configure DCI
+  hosts: DCI
+  tasks:
+    - name: Generate Device Configurations and Documentation
+      import_role:
+        name: arista.avd.eos_cli_config_gen
+
+
+- name: Deploy hosts for DC1
   hosts: cvp1
   tasks:
     - name: provision CVP with AVD configuration
       import_role:
         name: arista.avd.eos_config_deploy_cvp
       vars:
-        container_root: 'FABRIC'
+        container_root: 'HOSTS_DC1'
+        configlets_prefix: 'AVD'
+        state: present
+        execute_tasks: true
+        cv_collection: v3
+
+- name: Deploy hosts for DC2
+  hosts: cvp1
+  tasks:
+    - name: provision CVP with AVD configuration
+      import_role:
+        name: arista.avd.eos_config_deploy_cvp
+      vars:
+        container_root: 'HOSTS_DC2'
+        configlets_prefix: 'AVD'
+        state: present
+        execute_tasks: true
+        cv_collection: v3
+
+
+- name: Deploy DCI to CVP
+  hosts: cvp1
+  tasks:
+    - name: provision CVP with AVD configuration
+      import_role:
+        name: arista.avd.eos_config_deploy_cvp
+      vars:
+        container_root: 'DCI_Group'
         configlets_prefix: 'AVD'
         state: present
         execute_tasks: true

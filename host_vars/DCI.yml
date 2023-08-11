@@ -1,0 +1,42 @@
+ethernet_interfaces:
+  - name: Ethernet1
+    description: To borderleaf1-DC1
+    type: routed
+    shutdown: false
+    ip_address: 192.168.99.1/31
+  - name: Ethernet2
+    description: To borderleaf2-DC1
+    type: routed
+    shutdown: false
+    ip_address: 192.168.99.3/31
+  - name: Ethernet3
+    description: To borderleaf1-DC2
+    type: routed
+    shutdown: false
+    ip_address: 192.168.99.5/31
+  - name: Ethernet4
+    description: To borderleaf2-DC2
+    type: routed
+    shutdown: false
+    ip_address: 192.168.99.7/31
+
+loopback_interfaces:
+  - name: Loopback99
+    ip_address: 192.168.99.255/32
+    shutdown: false
+
+router_bgp: 
+  as: 65000
+  router_id: 192.168.99.255
+  peer_groups:
+    - name: UNDERLAY
+
+  neighbors:
+    - ip_address: 192.168.99.0
+      remote_as: 65104
+    - ip_address: 192.168.99.2
+      remote_as: 65104
+    - ip_address: 192.168.99.4
+      remote_as: 65204
+    - ip_address: 192.168.99.6
+      remote_as: 65204

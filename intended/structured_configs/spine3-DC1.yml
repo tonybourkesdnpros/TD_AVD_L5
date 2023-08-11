@@ -8,8 +8,6 @@ router_bgp:
   maximum_paths:
     paths: 4
     ecmp: 4
-  updates:
-    wait_install: true
   peer_groups:
   - name: IPv4-UNDERLAY-PEERS
     type: ipv4
@@ -49,6 +47,30 @@ router_bgp:
     peer_group: IPv4-UNDERLAY-PEERS
     remote_as: '65102'
     description: leaf4-DC1_Ethernet5
+  - ip_address: 192.168.103.29
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65104'
+    description: borderleaf1-DC1_Ethernet5
+  - ip_address: 192.168.103.35
+    peer_group: IPv4-UNDERLAY-PEERS
+    remote_as: '65104'
+    description: borderleaf2-DC1_Ethernet5
+  - ip_address: 192.168.101.5
+    peer_group: EVPN-OVERLAY-PEERS
+    description: borderleaf1-DC1
+    remote_as: '65104'
+  - ip_address: 192.168.201.5
+    peer_group: EVPN-OVERLAY-PEERS
+    description: borderleaf1-DC2
+    remote_as: '65204'
+  - ip_address: 192.168.101.6
+    peer_group: EVPN-OVERLAY-PEERS
+    description: borderleaf2-DC1
+    remote_as: '65104'
+  - ip_address: 192.168.201.6
+    peer_group: EVPN-OVERLAY-PEERS
+    description: borderleaf2-DC2
+    remote_as: '65204'
   - ip_address: 192.168.101.1
     peer_group: EVPN-OVERLAY-PEERS
     description: leaf1-DC1
@@ -134,6 +156,24 @@ ethernet_interfaces:
   mtu: 1500
   type: routed
   ip_address: 192.168.103.22/31
+- name: Ethernet6
+  peer: borderleaf1-DC1
+  peer_interface: Ethernet5
+  peer_type: l3leaf
+  description: P2P_LINK_TO_BORDERLEAF1-DC1_Ethernet5
+  shutdown: false
+  mtu: 1500
+  type: routed
+  ip_address: 192.168.103.28/31
+- name: Ethernet7
+  peer: borderleaf2-DC1
+  peer_interface: Ethernet5
+  peer_type: l3leaf
+  description: P2P_LINK_TO_BORDERLEAF2-DC1_Ethernet5
+  shutdown: false
+  mtu: 1500
+  type: routed
+  ip_address: 192.168.103.34/31
 loopback_interfaces:
 - name: Loopback0
   description: EVPN_Overlay_Peering

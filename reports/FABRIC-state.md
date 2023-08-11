@@ -1,0 +1,1501 @@
+
+# Validate State Report
+
+**Table of Contents:**
+
+- [Validate State Report](validate-state-report)
+  - [Test Results Summary](#test-results-summary)
+  - [Failed Test Results Summary](#failed-test-results-summary)
+  - [All Test Results](#all-test-results)
+
+## Test Results Summary
+
+### Summary Totals
+
+| Total Tests | Total Tests Passed | Total Tests Failed |
+| ----------- | ------------------ | ------------------ |
+| 1146 | 854 | 292 |
+
+### Summary Totals Devices Under Tests
+
+| DUT | Total Tests | Tests Passed | Tests Failed | Categories Failed |
+| --- | ----------- | ------------ | ------------ | ----------------- |
+| borderleaf1-DC1 |  80 | 58 | 22 | IP Reachability, Loopback0 Reachability |
+| borderleaf1-DC2 |  80 | 58 | 22 | IP Reachability, Loopback0 Reachability |
+| borderleaf2-DC1 |  80 | 58 | 22 | IP Reachability, Loopback0 Reachability |
+| borderleaf2-DC2 |  80 | 58 | 22 | IP Reachability, Loopback0 Reachability |
+| leaf1-DC1 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf1-DC2 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf2-DC1 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf2-DC2 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf3-DC1 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf3-DC2 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf4-DC1 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| leaf4-DC2 |  77 | 56 | 21 | IP Reachability, Loopback0 Reachability |
+| spine1-DC1 |  35 | 29 | 6 | IP Reachability |
+| spine1-DC2 |  35 | 29 | 6 | IP Reachability |
+| spine2-DC1 |  35 | 29 | 6 | IP Reachability |
+| spine2-DC2 |  35 | 29 | 6 | IP Reachability |
+| spine3-DC1 |  35 | 29 | 6 | IP Reachability |
+| spine3-DC2 |  35 | 29 | 6 | IP Reachability |
+
+### Summary Totals Per Category
+
+| Test Category | Total Tests | Tests Passed | Tests Failed |
+| ------------- | ----------- | ------------ | ------------ |
+| NTP |  18 | 18 | 0 |
+| Interface State |  238 | 238 | 0 |
+| LLDP Topology |  96 | 96 | 0 |
+| MLAG |  12 | 12 | 0 |
+| IP Reachability |  76 | 0 | 76 |
+| BGP |  202 | 202 | 0 |
+| Routing Table |  288 | 288 | 0 |
+| Loopback0 Reachability |  216 | 0 | 216 |
+
+## Failed Test Results Summary
+
+| Test ID | Node | Test Category | Test Description | Test | Test Result | Failure Reason |
+| ------- | ---- | ------------- | ---------------- | ---- | ----------- | -------------- |
+| 365 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 366 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 367 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 368 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet12 - Destination: DCI_Ethernet1 | FAIL | 100% packet loss |
+| 369 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 370 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 371 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 372 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 373 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 374 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 375 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 376 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 377 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 378 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 379 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 380 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 381 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 382 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 383 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 384 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 385 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 386 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 387 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 388 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 389 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 390 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 391 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 392 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 393 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 394 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 395 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 396 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 397 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 398 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 399 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 400 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 401 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 402 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 403 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 404 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 405 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 406 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 407 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 408 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 409 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 410 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 411 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 412 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 413 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 414 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 415 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 416 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 417 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 418 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 419 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 420 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 421 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 422 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 423 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 424 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 425 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 426 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 427 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 428 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 429 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 430 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 431 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 432 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 433 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 434 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 435 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 436 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 437 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 438 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 439 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 440 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 931 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 932 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 933 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 934 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 935 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 936 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 937 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 938 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 939 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 940 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 941 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 942 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 943 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 944 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 945 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 946 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 947 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 948 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 949 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 950 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 951 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 952 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 953 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 954 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 955 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 956 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 957 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 958 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 959 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 960 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 961 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 962 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 963 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 964 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 965 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 966 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 967 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 968 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 969 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 970 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 971 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 972 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 973 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 974 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 975 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 976 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 977 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 978 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 979 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 980 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 981 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 982 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 983 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 984 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 985 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 986 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 987 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 988 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 989 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 990 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 991 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 992 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 993 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 994 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 995 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 996 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 997 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 998 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 999 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1000 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1001 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1002 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1003 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1004 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1005 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1006 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1007 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1008 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1009 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1010 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1011 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1012 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1013 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1014 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1015 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1016 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1017 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1018 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1019 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1020 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1021 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1022 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1023 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1024 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1025 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1026 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1027 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1028 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1029 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1030 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1031 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1032 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1033 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1034 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1035 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1036 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1037 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1038 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1039 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1040 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1041 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1042 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1043 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1044 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1045 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1046 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1047 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1048 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1049 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1050 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1051 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1052 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1053 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1054 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1055 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1056 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1057 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1058 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1059 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1060 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1061 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1062 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1063 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1064 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1065 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1066 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1067 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1068 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1069 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1070 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1071 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1072 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1073 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1074 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1075 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1076 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1077 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1078 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1079 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1080 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1081 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1082 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1083 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1084 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1085 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1086 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1087 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1088 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1089 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1090 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1091 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1092 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1093 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1094 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1095 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1096 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1097 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1098 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1099 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1100 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1101 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1102 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1103 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1104 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1105 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1106 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1107 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1108 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1109 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1110 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1111 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1112 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1113 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1114 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1115 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1116 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1117 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1118 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1119 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1120 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1121 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1122 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1123 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1124 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1125 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1126 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1127 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1128 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1129 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1130 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1131 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1132 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1133 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1134 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1135 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1136 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1137 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1138 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1139 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1140 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1141 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1142 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1143 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1144 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1145 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1146 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+
+## All Test Results
+
+| Test ID | Node | Test Category | Test Description | Test | Test Result | Failure Reason |
+| ------- | ---- | ------------- | ---------------- | ---- | ----------- | -------------- |
+| 1 | borderleaf1-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 2 | borderleaf1-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 3 | borderleaf2-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 4 | borderleaf2-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 5 | leaf1-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 6 | leaf1-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 7 | leaf2-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 8 | leaf2-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 9 | leaf3-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 10 | leaf3-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 11 | leaf4-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 12 | leaf4-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 13 | spine1-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 14 | spine1-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 15 | spine2-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 16 | spine2-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 17 | spine3-DC1 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 18 | spine3-DC2 | NTP | Synchronised with NTP server | NTP | PASS | - |
+| 19 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_borderleaf2-DC1_Ethernet1 | PASS | - |
+| 20 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_borderleaf2-DC1_Ethernet2 | PASS | - |
+| 21 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet6 | PASS | - |
+| 22 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet6 | PASS | - |
+| 23 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet6 | PASS | - |
+| 24 | borderleaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet12 - P2P_LINK_TO_DCI_Ethernet1 | PASS | - |
+| 25 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_borderleaf2-DC2_Ethernet1 | PASS | - |
+| 26 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_borderleaf2-DC2_Ethernet2 | PASS | - |
+| 27 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet6 | PASS | - |
+| 28 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet6 | PASS | - |
+| 29 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet6 | PASS | - |
+| 30 | borderleaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet12 - P2P_LINK_TO_DCI_Ethernet2 | PASS | - |
+| 31 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_borderleaf1-DC1_Ethernet1 | PASS | - |
+| 32 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_borderleaf1-DC1_Ethernet2 | PASS | - |
+| 33 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet7 | PASS | - |
+| 34 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet7 | PASS | - |
+| 35 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet7 | PASS | - |
+| 36 | borderleaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet12 - P2P_LINK_TO_DCI_Ethernet2 | PASS | - |
+| 37 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_borderleaf1-DC2_Ethernet1 | PASS | - |
+| 38 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_borderleaf1-DC2_Ethernet2 | PASS | - |
+| 39 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet7 | PASS | - |
+| 40 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet7 | PASS | - |
+| 41 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet7 | PASS | - |
+| 42 | borderleaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet12 - P2P_LINK_TO_DCI_Ethernet2 | PASS | - |
+| 43 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf2-DC1_Ethernet1 | PASS | - |
+| 44 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf2-DC1_Ethernet2 | PASS | - |
+| 45 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet2 | PASS | - |
+| 46 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet2 | PASS | - |
+| 47 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet2 | PASS | - |
+| 48 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host1-DC1_Ethernet1 | PASS | - |
+| 49 | leaf1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host1-DC1_Ethernet2 | PASS | - |
+| 50 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf2-DC2_Ethernet1 | PASS | - |
+| 51 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf2-DC2_Ethernet2 | PASS | - |
+| 52 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet2 | PASS | - |
+| 53 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet2 | PASS | - |
+| 54 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet2 | PASS | - |
+| 55 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host1-DC2_Ethernet1 | PASS | - |
+| 56 | leaf1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host1-DC2_Ethernet2 | PASS | - |
+| 57 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf1-DC1_Ethernet1 | PASS | - |
+| 58 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf1-DC1_Ethernet2 | PASS | - |
+| 59 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet3 | PASS | - |
+| 60 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet3 | PASS | - |
+| 61 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet3 | PASS | - |
+| 62 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host1-DC1_Ethernet3 | PASS | - |
+| 63 | leaf2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host1-DC1_Ethernet4 | PASS | - |
+| 64 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf1-DC2_Ethernet1 | PASS | - |
+| 65 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf1-DC2_Ethernet2 | PASS | - |
+| 66 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet3 | PASS | - |
+| 67 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet3 | PASS | - |
+| 68 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet3 | PASS | - |
+| 69 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host1-DC2_Ethernet3 | PASS | - |
+| 70 | leaf2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host1-DC2_Ethernet4 | PASS | - |
+| 71 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf4-DC1_Ethernet1 | PASS | - |
+| 72 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf4-DC1_Ethernet2 | PASS | - |
+| 73 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet4 | PASS | - |
+| 74 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet4 | PASS | - |
+| 75 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet4 | PASS | - |
+| 76 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host2-DC1_Ethernet1 | PASS | - |
+| 77 | leaf3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host2-DC1_Ethernet2 | PASS | - |
+| 78 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf4-DC2_Ethernet1 | PASS | - |
+| 79 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf4-DC2_Ethernet2 | PASS | - |
+| 80 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet4 | PASS | - |
+| 81 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet4 | PASS | - |
+| 82 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet4 | PASS | - |
+| 83 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host2-DC2_Ethernet1 | PASS | - |
+| 84 | leaf3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host2-DC2_Ethernet2 | PASS | - |
+| 85 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf3-DC1_Ethernet1 | PASS | - |
+| 86 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf3-DC1_Ethernet2 | PASS | - |
+| 87 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC1_Ethernet5 | PASS | - |
+| 88 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC1_Ethernet5 | PASS | - |
+| 89 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC1_Ethernet5 | PASS | - |
+| 90 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host2-DC1_Ethernet3 | PASS | - |
+| 91 | leaf4-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host2-DC1_Ethernet4 | PASS | - |
+| 92 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet1 - MLAG_PEER_leaf3-DC2_Ethernet1 | PASS | - |
+| 93 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - MLAG_PEER_leaf3-DC2_Ethernet2 | PASS | - |
+| 94 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_SPINE1-DC2_Ethernet5 | PASS | - |
+| 95 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_SPINE2-DC2_Ethernet5 | PASS | - |
+| 96 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_SPINE3-DC2_Ethernet5 | PASS | - |
+| 97 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - host2-DC2_Ethernet3 | PASS | - |
+| 98 | leaf4-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - host2-DC2_Ethernet4 | PASS | - |
+| 99 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC1_Ethernet3 | PASS | - |
+| 100 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC1_Ethernet3 | PASS | - |
+| 101 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC1_Ethernet3 | PASS | - |
+| 102 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC1_Ethernet3 | PASS | - |
+| 103 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC1_Ethernet3 | PASS | - |
+| 104 | spine1-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC1_Ethernet3 | PASS | - |
+| 105 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC2_Ethernet3 | PASS | - |
+| 106 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC2_Ethernet3 | PASS | - |
+| 107 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC2_Ethernet3 | PASS | - |
+| 108 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC2_Ethernet3 | PASS | - |
+| 109 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC2_Ethernet3 | PASS | - |
+| 110 | spine1-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC2_Ethernet3 | PASS | - |
+| 111 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC1_Ethernet4 | PASS | - |
+| 112 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC1_Ethernet4 | PASS | - |
+| 113 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC1_Ethernet4 | PASS | - |
+| 114 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC1_Ethernet4 | PASS | - |
+| 115 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC1_Ethernet4 | PASS | - |
+| 116 | spine2-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC1_Ethernet4 | PASS | - |
+| 117 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC2_Ethernet4 | PASS | - |
+| 118 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC2_Ethernet4 | PASS | - |
+| 119 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC2_Ethernet4 | PASS | - |
+| 120 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC2_Ethernet4 | PASS | - |
+| 121 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC2_Ethernet4 | PASS | - |
+| 122 | spine2-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC2_Ethernet4 | PASS | - |
+| 123 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC1_Ethernet5 | PASS | - |
+| 124 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC1_Ethernet5 | PASS | - |
+| 125 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC1_Ethernet5 | PASS | - |
+| 126 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC1_Ethernet5 | PASS | - |
+| 127 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC1_Ethernet5 | PASS | - |
+| 128 | spine3-DC1 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC1_Ethernet5 | PASS | - |
+| 129 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet2 - P2P_LINK_TO_LEAF1-DC2_Ethernet5 | PASS | - |
+| 130 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet3 - P2P_LINK_TO_LEAF2-DC2_Ethernet5 | PASS | - |
+| 131 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet4 - P2P_LINK_TO_LEAF3-DC2_Ethernet5 | PASS | - |
+| 132 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet5 - P2P_LINK_TO_LEAF4-DC2_Ethernet5 | PASS | - |
+| 133 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet6 - P2P_LINK_TO_BORDERLEAF1-DC2_Ethernet5 | PASS | - |
+| 134 | spine3-DC2 | Interface State | Ethernet Interface & Line Protocol == "up" | Ethernet7 - P2P_LINK_TO_BORDERLEAF2-DC2_Ethernet5 | PASS | - |
+| 135 | borderleaf1-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_borderleaf2-DC1_Po1 | PASS | - |
+| 136 | borderleaf1-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_borderleaf2-DC2_Po1 | PASS | - |
+| 137 | borderleaf2-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_borderleaf1-DC1_Po1 | PASS | - |
+| 138 | borderleaf2-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_borderleaf1-DC2_Po1 | PASS | - |
+| 139 | leaf1-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf2-DC1_Po1 | PASS | - |
+| 140 | leaf1-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host1-DC1_PortChannel host1 | PASS | - |
+| 141 | leaf1-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf2-DC2_Po1 | PASS | - |
+| 142 | leaf1-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host1-DC2_PortChannel host1 | PASS | - |
+| 143 | leaf2-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf1-DC1_Po1 | PASS | - |
+| 144 | leaf2-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host1-DC1_PortChannel host1 | PASS | - |
+| 145 | leaf2-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf1-DC2_Po1 | PASS | - |
+| 146 | leaf2-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host1-DC2_PortChannel host1 | PASS | - |
+| 147 | leaf3-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf4-DC1_Po1 | PASS | - |
+| 148 | leaf3-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host2-DC1_PortChannel host1 | PASS | - |
+| 149 | leaf3-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf4-DC2_Po1 | PASS | - |
+| 150 | leaf3-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host2-DC2_PortChannel host1 | PASS | - |
+| 151 | leaf4-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf3-DC1_Po1 | PASS | - |
+| 152 | leaf4-DC1 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host2-DC1_PortChannel host1 | PASS | - |
+| 153 | leaf4-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel1 - MLAG_PEER_leaf3-DC2_Po1 | PASS | - |
+| 154 | leaf4-DC2 | Interface State | Port-Channel Interface & Line Protocol == "up" | Port-Channel6 - host2-DC2_PortChannel host1 | PASS | - |
+| 155 | borderleaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 156 | borderleaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 157 | borderleaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 158 | borderleaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 159 | borderleaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 160 | borderleaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 161 | borderleaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 162 | borderleaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 163 | borderleaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 164 | borderleaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 165 | borderleaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 166 | borderleaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 167 | borderleaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 168 | borderleaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 169 | borderleaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 170 | borderleaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 171 | borderleaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 172 | borderleaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 173 | borderleaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 174 | borderleaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 175 | leaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 176 | leaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 177 | leaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 178 | leaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 179 | leaf1-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 180 | leaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 181 | leaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 182 | leaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 183 | leaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 184 | leaf1-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 185 | leaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 186 | leaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 187 | leaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 188 | leaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 189 | leaf2-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 190 | leaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 191 | leaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 192 | leaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 193 | leaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 194 | leaf2-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 195 | leaf3-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 196 | leaf3-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 197 | leaf3-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 198 | leaf3-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 199 | leaf3-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 200 | leaf3-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 201 | leaf3-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 202 | leaf3-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 203 | leaf3-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 204 | leaf3-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 205 | leaf4-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 206 | leaf4-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 207 | leaf4-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 208 | leaf4-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 209 | leaf4-DC1 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 210 | leaf4-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4093 - MLAG_PEER_L3_PEERING | PASS | - |
+| 211 | leaf4-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan4094 - MLAG_PEER | PASS | - |
+| 212 | leaf4-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan10 - DMZ | PASS | - |
+| 213 | leaf4-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan20 - Internal | PASS | - |
+| 214 | leaf4-DC2 | Interface State | Vlan Interface & Line Protocol == "up" | Vlan3009 - MLAG_PEER_L3_iBGP: vrf VRF_A | PASS | - |
+| 215 | borderleaf1-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 216 | borderleaf1-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 217 | borderleaf2-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 218 | borderleaf2-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 219 | leaf1-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 220 | leaf1-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 221 | leaf2-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 222 | leaf2-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 223 | leaf3-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 224 | leaf3-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 225 | leaf4-DC1 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 226 | leaf4-DC2 | Interface State | Vxlan Interface Status & Line Protocol == "up" | Vxlan1 | PASS | - |
+| 227 | borderleaf1-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 228 | borderleaf1-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 229 | borderleaf1-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 230 | borderleaf1-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 231 | borderleaf2-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 232 | borderleaf2-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 233 | borderleaf2-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 234 | borderleaf2-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 235 | leaf1-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 236 | leaf1-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 237 | leaf1-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 238 | leaf1-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 239 | leaf2-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 240 | leaf2-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 241 | leaf2-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 242 | leaf2-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 243 | leaf3-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 244 | leaf3-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 245 | leaf3-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 246 | leaf3-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 247 | leaf4-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 248 | leaf4-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 249 | leaf4-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 250 | leaf4-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback1 - VTEP_VXLAN_Tunnel_Source | PASS | - |
+| 251 | spine1-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 252 | spine1-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 253 | spine2-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 254 | spine2-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 255 | spine3-DC1 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 256 | spine3-DC2 | Interface State | Loopback Interface Status & Line Protocol == "up" | Loopback0 - EVPN_Overlay_Peering | PASS | - |
+| 257 | borderleaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: borderleaf2-DC1_Ethernet1 | PASS | - |
+| 258 | borderleaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: borderleaf2-DC1_Ethernet2 | PASS | - |
+| 259 | borderleaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet6 | PASS | - |
+| 260 | borderleaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet6 | PASS | - |
+| 261 | borderleaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet6 | PASS | - |
+| 262 | borderleaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: borderleaf2-DC2_Ethernet1 | PASS | - |
+| 263 | borderleaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: borderleaf2-DC2_Ethernet2 | PASS | - |
+| 264 | borderleaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet6 | PASS | - |
+| 265 | borderleaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet6 | PASS | - |
+| 266 | borderleaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet6 | PASS | - |
+| 267 | borderleaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: borderleaf1-DC1_Ethernet1 | PASS | - |
+| 268 | borderleaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: borderleaf1-DC1_Ethernet2 | PASS | - |
+| 269 | borderleaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet7 | PASS | - |
+| 270 | borderleaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet7 | PASS | - |
+| 271 | borderleaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet7 | PASS | - |
+| 272 | borderleaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: borderleaf1-DC2_Ethernet1 | PASS | - |
+| 273 | borderleaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: borderleaf1-DC2_Ethernet2 | PASS | - |
+| 274 | borderleaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet7 | PASS | - |
+| 275 | borderleaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet7 | PASS | - |
+| 276 | borderleaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet7 | PASS | - |
+| 277 | leaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf2-DC1_Ethernet1 | PASS | - |
+| 278 | leaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf2-DC1_Ethernet2 | PASS | - |
+| 279 | leaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet2 | PASS | - |
+| 280 | leaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet2 | PASS | - |
+| 281 | leaf1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet2 | PASS | - |
+| 282 | leaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf2-DC2_Ethernet1 | PASS | - |
+| 283 | leaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf2-DC2_Ethernet2 | PASS | - |
+| 284 | leaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet2 | PASS | - |
+| 285 | leaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet2 | PASS | - |
+| 286 | leaf1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet2 | PASS | - |
+| 287 | leaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf1-DC1_Ethernet1 | PASS | - |
+| 288 | leaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC1_Ethernet2 | PASS | - |
+| 289 | leaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet3 | PASS | - |
+| 290 | leaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet3 | PASS | - |
+| 291 | leaf2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet3 | PASS | - |
+| 292 | leaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf1-DC2_Ethernet1 | PASS | - |
+| 293 | leaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC2_Ethernet2 | PASS | - |
+| 294 | leaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet3 | PASS | - |
+| 295 | leaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet3 | PASS | - |
+| 296 | leaf2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet3 | PASS | - |
+| 297 | leaf3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf4-DC1_Ethernet1 | PASS | - |
+| 298 | leaf3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf4-DC1_Ethernet2 | PASS | - |
+| 299 | leaf3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet4 | PASS | - |
+| 300 | leaf3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet4 | PASS | - |
+| 301 | leaf3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet4 | PASS | - |
+| 302 | leaf3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf4-DC2_Ethernet1 | PASS | - |
+| 303 | leaf3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf4-DC2_Ethernet2 | PASS | - |
+| 304 | leaf3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet4 | PASS | - |
+| 305 | leaf3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet4 | PASS | - |
+| 306 | leaf3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet4 | PASS | - |
+| 307 | leaf4-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf3-DC1_Ethernet1 | PASS | - |
+| 308 | leaf4-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf3-DC1_Ethernet2 | PASS | - |
+| 309 | leaf4-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC1_Ethernet5 | PASS | - |
+| 310 | leaf4-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC1_Ethernet5 | PASS | - |
+| 311 | leaf4-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC1_Ethernet5 | PASS | - |
+| 312 | leaf4-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet1 - remote: leaf3-DC2_Ethernet1 | PASS | - |
+| 313 | leaf4-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf3-DC2_Ethernet2 | PASS | - |
+| 314 | leaf4-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: spine1-DC2_Ethernet5 | PASS | - |
+| 315 | leaf4-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: spine2-DC2_Ethernet5 | PASS | - |
+| 316 | leaf4-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: spine3-DC2_Ethernet5 | PASS | - |
+| 317 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC1_Ethernet3 | PASS | - |
+| 318 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC1_Ethernet3 | PASS | - |
+| 319 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC1_Ethernet3 | PASS | - |
+| 320 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC1_Ethernet3 | PASS | - |
+| 321 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC1_Ethernet3 | PASS | - |
+| 322 | spine1-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC1_Ethernet3 | PASS | - |
+| 323 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC2_Ethernet3 | PASS | - |
+| 324 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC2_Ethernet3 | PASS | - |
+| 325 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC2_Ethernet3 | PASS | - |
+| 326 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC2_Ethernet3 | PASS | - |
+| 327 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC2_Ethernet3 | PASS | - |
+| 328 | spine1-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC2_Ethernet3 | PASS | - |
+| 329 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC1_Ethernet4 | PASS | - |
+| 330 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC1_Ethernet4 | PASS | - |
+| 331 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC1_Ethernet4 | PASS | - |
+| 332 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC1_Ethernet4 | PASS | - |
+| 333 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC1_Ethernet4 | PASS | - |
+| 334 | spine2-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC1_Ethernet4 | PASS | - |
+| 335 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC2_Ethernet4 | PASS | - |
+| 336 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC2_Ethernet4 | PASS | - |
+| 337 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC2_Ethernet4 | PASS | - |
+| 338 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC2_Ethernet4 | PASS | - |
+| 339 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC2_Ethernet4 | PASS | - |
+| 340 | spine2-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC2_Ethernet4 | PASS | - |
+| 341 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC1_Ethernet5 | PASS | - |
+| 342 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC1_Ethernet5 | PASS | - |
+| 343 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC1_Ethernet5 | PASS | - |
+| 344 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC1_Ethernet5 | PASS | - |
+| 345 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC1_Ethernet5 | PASS | - |
+| 346 | spine3-DC1 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC1_Ethernet5 | PASS | - |
+| 347 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet2 - remote: leaf1-DC2_Ethernet5 | PASS | - |
+| 348 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet3 - remote: leaf2-DC2_Ethernet5 | PASS | - |
+| 349 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet4 - remote: leaf3-DC2_Ethernet5 | PASS | - |
+| 350 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet5 - remote: leaf4-DC2_Ethernet5 | PASS | - |
+| 351 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet6 - remote: borderleaf1-DC2_Ethernet5 | PASS | - |
+| 352 | spine3-DC2 | LLDP Topology | LLDP topology - validate peer and interface | local: Ethernet7 - remote: borderleaf2-DC2_Ethernet5 | PASS | - |
+| 353 | borderleaf1-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 354 | borderleaf1-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 355 | borderleaf2-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 356 | borderleaf2-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 357 | leaf1-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 358 | leaf1-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 359 | leaf2-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 360 | leaf2-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 361 | leaf3-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 362 | leaf3-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 363 | leaf4-DC1 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 364 | leaf4-DC2 | MLAG | MLAG State active & Status connected | MLAG | PASS | - |
+| 365 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 366 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 367 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet6 | FAIL | 100% packet loss |
+| 368 | borderleaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC1_Ethernet12 - Destination: DCI_Ethernet1 | FAIL | 100% packet loss |
+| 369 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 370 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 371 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet6 | FAIL | 100% packet loss |
+| 372 | borderleaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf1-DC2_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 373 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 374 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 375 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet7 | FAIL | 100% packet loss |
+| 376 | borderleaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC1_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 377 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 378 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 379 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet7 | FAIL | 100% packet loss |
+| 380 | borderleaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: borderleaf2-DC2_Ethernet12 - Destination: DCI_Ethernet2 | FAIL | 100% packet loss |
+| 381 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 382 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 383 | leaf1-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet2 | FAIL | 100% packet loss |
+| 384 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 385 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 386 | leaf1-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf1-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet2 | FAIL | 100% packet loss |
+| 387 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 388 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 389 | leaf2-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 390 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 391 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 392 | leaf2-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf2-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 393 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 394 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 395 | leaf3-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 396 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 397 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 398 | leaf3-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf3-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 399 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet3 - Destination: spine1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 400 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet4 - Destination: spine2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 401 | leaf4-DC1 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC1_Ethernet5 - Destination: spine3-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 402 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet3 - Destination: spine1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 403 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet4 - Destination: spine2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 404 | leaf4-DC2 | IP Reachability | ip reachability test p2p links | Source: leaf4-DC2_Ethernet5 - Destination: spine3-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 405 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 406 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 407 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 408 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 409 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 410 | spine1-DC1 | IP Reachability | ip reachability test p2p links | Source: spine1-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet3 | FAIL | 100% packet loss |
+| 411 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 412 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 413 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 414 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 415 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 416 | spine1-DC2 | IP Reachability | ip reachability test p2p links | Source: spine1-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet3 | FAIL | 100% packet loss |
+| 417 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 418 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 419 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 420 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 421 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 422 | spine2-DC1 | IP Reachability | ip reachability test p2p links | Source: spine2-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet4 | FAIL | 100% packet loss |
+| 423 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 424 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 425 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 426 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 427 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 428 | spine2-DC2 | IP Reachability | ip reachability test p2p links | Source: spine2-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet4 | FAIL | 100% packet loss |
+| 429 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet2 - Destination: leaf1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 430 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet3 - Destination: leaf2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 431 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet4 - Destination: leaf3-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 432 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet5 - Destination: leaf4-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 433 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet6 - Destination: borderleaf1-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 434 | spine3-DC1 | IP Reachability | ip reachability test p2p links | Source: spine3-DC1_Ethernet7 - Destination: borderleaf2-DC1_Ethernet5 | FAIL | 100% packet loss |
+| 435 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet2 - Destination: leaf1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 436 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet3 - Destination: leaf2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 437 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet4 - Destination: leaf3-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 438 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet5 - Destination: leaf4-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 439 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet6 - Destination: borderleaf1-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 440 | spine3-DC2 | IP Reachability | ip reachability test p2p links | Source: spine3-DC2_Ethernet7 - Destination: borderleaf2-DC2_Ethernet5 | FAIL | 100% packet loss |
+| 441 | borderleaf1-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 442 | borderleaf1-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 443 | borderleaf2-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 444 | borderleaf2-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 445 | leaf1-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 446 | leaf1-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 447 | leaf2-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 448 | leaf2-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 449 | leaf3-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 450 | leaf3-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 451 | leaf4-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 452 | leaf4-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 453 | spine1-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 454 | spine1-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 455 | spine2-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 456 | spine2-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 457 | spine3-DC1 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 458 | spine3-DC2 | BGP | ArBGP is configured and operating | ArBGP | PASS | - |
+| 459 | borderleaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.9 | PASS | - |
+| 460 | borderleaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.24 | PASS | - |
+| 461 | borderleaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.26 | PASS | - |
+| 462 | borderleaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.28 | PASS | - |
+| 463 | borderleaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.99.1 | PASS | - |
+| 464 | borderleaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.9 | PASS | - |
+| 465 | borderleaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.24 | PASS | - |
+| 466 | borderleaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.26 | PASS | - |
+| 467 | borderleaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.28 | PASS | - |
+| 468 | borderleaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.99.5 | PASS | - |
+| 469 | borderleaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.8 | PASS | - |
+| 470 | borderleaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.30 | PASS | - |
+| 471 | borderleaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.32 | PASS | - |
+| 472 | borderleaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.34 | PASS | - |
+| 473 | borderleaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.99.3 | PASS | - |
+| 474 | borderleaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.8 | PASS | - |
+| 475 | borderleaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.30 | PASS | - |
+| 476 | borderleaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.32 | PASS | - |
+| 477 | borderleaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.34 | PASS | - |
+| 478 | borderleaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.99.7 | PASS | - |
+| 479 | leaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.1 | PASS | - |
+| 480 | leaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.0 | PASS | - |
+| 481 | leaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.2 | PASS | - |
+| 482 | leaf1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.4 | PASS | - |
+| 483 | leaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.1 | PASS | - |
+| 484 | leaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.0 | PASS | - |
+| 485 | leaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.2 | PASS | - |
+| 486 | leaf1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.4 | PASS | - |
+| 487 | leaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.0 | PASS | - |
+| 488 | leaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.6 | PASS | - |
+| 489 | leaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.8 | PASS | - |
+| 490 | leaf2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.10 | PASS | - |
+| 491 | leaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.0 | PASS | - |
+| 492 | leaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.6 | PASS | - |
+| 493 | leaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.8 | PASS | - |
+| 494 | leaf2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.10 | PASS | - |
+| 495 | leaf3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.5 | PASS | - |
+| 496 | leaf3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.12 | PASS | - |
+| 497 | leaf3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.14 | PASS | - |
+| 498 | leaf3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.16 | PASS | - |
+| 499 | leaf3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.5 | PASS | - |
+| 500 | leaf3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.12 | PASS | - |
+| 501 | leaf3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.14 | PASS | - |
+| 502 | leaf3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.16 | PASS | - |
+| 503 | leaf4-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.4 | PASS | - |
+| 504 | leaf4-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.18 | PASS | - |
+| 505 | leaf4-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.20 | PASS | - |
+| 506 | leaf4-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.22 | PASS | - |
+| 507 | leaf4-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 10.255.251.4 | PASS | - |
+| 508 | leaf4-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.18 | PASS | - |
+| 509 | leaf4-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.20 | PASS | - |
+| 510 | leaf4-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.22 | PASS | - |
+| 511 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.1 | PASS | - |
+| 512 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.7 | PASS | - |
+| 513 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.13 | PASS | - |
+| 514 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.19 | PASS | - |
+| 515 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.25 | PASS | - |
+| 516 | spine1-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.31 | PASS | - |
+| 517 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.1 | PASS | - |
+| 518 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.7 | PASS | - |
+| 519 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.13 | PASS | - |
+| 520 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.19 | PASS | - |
+| 521 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.25 | PASS | - |
+| 522 | spine1-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.31 | PASS | - |
+| 523 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.3 | PASS | - |
+| 524 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.9 | PASS | - |
+| 525 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.15 | PASS | - |
+| 526 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.21 | PASS | - |
+| 527 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.27 | PASS | - |
+| 528 | spine2-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.33 | PASS | - |
+| 529 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.3 | PASS | - |
+| 530 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.9 | PASS | - |
+| 531 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.15 | PASS | - |
+| 532 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.21 | PASS | - |
+| 533 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.27 | PASS | - |
+| 534 | spine2-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.33 | PASS | - |
+| 535 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.5 | PASS | - |
+| 536 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.11 | PASS | - |
+| 537 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.17 | PASS | - |
+| 538 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.23 | PASS | - |
+| 539 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.29 | PASS | - |
+| 540 | spine3-DC1 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.103.35 | PASS | - |
+| 541 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.5 | PASS | - |
+| 542 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.11 | PASS | - |
+| 543 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.17 | PASS | - |
+| 544 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.23 | PASS | - |
+| 545 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.29 | PASS | - |
+| 546 | spine3-DC2 | BGP | ip bgp peer state established (ipv4) | bgp_neighbor: 192.168.203.35 | PASS | - |
+| 547 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 548 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 549 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 550 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 551 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 552 | borderleaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 553 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 554 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 555 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 556 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 557 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 558 | borderleaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 559 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 560 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 561 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 562 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 563 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 564 | borderleaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 565 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 566 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 567 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 568 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 569 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 570 | borderleaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 571 | leaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 572 | leaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 573 | leaf1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 574 | leaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 575 | leaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 576 | leaf1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 577 | leaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 578 | leaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 579 | leaf2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 580 | leaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 581 | leaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 582 | leaf2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 583 | leaf3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 584 | leaf3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 585 | leaf3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 586 | leaf3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 587 | leaf3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 588 | leaf3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 589 | leaf4-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.11 | PASS | - |
+| 590 | leaf4-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.12 | PASS | - |
+| 591 | leaf4-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.13 | PASS | - |
+| 592 | leaf4-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.11 | PASS | - |
+| 593 | leaf4-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.12 | PASS | - |
+| 594 | leaf4-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.13 | PASS | - |
+| 595 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 596 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 597 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 598 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 599 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.1 | PASS | - |
+| 600 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.2 | PASS | - |
+| 601 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.3 | PASS | - |
+| 602 | spine1-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.4 | PASS | - |
+| 603 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 604 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 605 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 606 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 607 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.1 | PASS | - |
+| 608 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.2 | PASS | - |
+| 609 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.3 | PASS | - |
+| 610 | spine1-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.4 | PASS | - |
+| 611 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 612 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 613 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 614 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 615 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.1 | PASS | - |
+| 616 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.2 | PASS | - |
+| 617 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.3 | PASS | - |
+| 618 | spine2-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.4 | PASS | - |
+| 619 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 620 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 621 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 622 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 623 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.1 | PASS | - |
+| 624 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.2 | PASS | - |
+| 625 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.3 | PASS | - |
+| 626 | spine2-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.4 | PASS | - |
+| 627 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 628 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 629 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 630 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 631 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.1 | PASS | - |
+| 632 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.2 | PASS | - |
+| 633 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.3 | PASS | - |
+| 634 | spine3-DC1 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.4 | PASS | - |
+| 635 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.5 | PASS | - |
+| 636 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.5 | PASS | - |
+| 637 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.101.6 | PASS | - |
+| 638 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.6 | PASS | - |
+| 639 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.1 | PASS | - |
+| 640 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.2 | PASS | - |
+| 641 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.3 | PASS | - |
+| 642 | spine3-DC2 | BGP | bgp evpn peer state established (evpn) | bgp_neighbor: 192.168.201.4 | PASS | - |
+| 643 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 644 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 645 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 646 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 647 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 648 | borderleaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 649 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 650 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 651 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 652 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 653 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 654 | borderleaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 655 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 656 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 657 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 658 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 659 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 660 | borderleaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 661 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 662 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 663 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 664 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 665 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 666 | borderleaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 667 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 668 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 669 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 670 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 671 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 672 | leaf1-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 673 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 674 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 675 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 676 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 677 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 678 | leaf1-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 679 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 680 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 681 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 682 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 683 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 684 | leaf2-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 685 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 686 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 687 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 688 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 689 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 690 | leaf2-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 691 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 692 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 693 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 694 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 695 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 696 | leaf3-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 697 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 698 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 699 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 700 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 701 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 702 | leaf3-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 703 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 704 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 705 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 706 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 707 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 708 | leaf4-DC1 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 709 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.102.5 | PASS | - |
+| 710 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.202.5 | PASS | - |
+| 711 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.102.1 | PASS | - |
+| 712 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.202.1 | PASS | - |
+| 713 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.102.3 | PASS | - |
+| 714 | leaf4-DC2 | Routing Table | Remote VTEP address | 192.168.202.3 | PASS | - |
+| 715 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 716 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 717 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 718 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 719 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 720 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 721 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 722 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 723 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 724 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 725 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 726 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 727 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 728 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 729 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 730 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 731 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 732 | borderleaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 733 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 734 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 735 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 736 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 737 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 738 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 739 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 740 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 741 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 742 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 743 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 744 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 745 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 746 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 747 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 748 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 749 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 750 | borderleaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 751 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 752 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 753 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 754 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 755 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 756 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 757 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 758 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 759 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 760 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 761 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 762 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 763 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 764 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 765 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 766 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 767 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 768 | borderleaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 769 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 770 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 771 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 772 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 773 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 774 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 775 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 776 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 777 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 778 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 779 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 780 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 781 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 782 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 783 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 784 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 785 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 786 | borderleaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 787 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 788 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 789 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 790 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 791 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 792 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 793 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 794 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 795 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 796 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 797 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 798 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 799 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 800 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 801 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 802 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 803 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 804 | leaf1-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 805 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 806 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 807 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 808 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 809 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 810 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 811 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 812 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 813 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 814 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 815 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 816 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 817 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 818 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 819 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 820 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 821 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 822 | leaf1-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 823 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 824 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 825 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 826 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 827 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 828 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 829 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 830 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 831 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 832 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 833 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 834 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 835 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 836 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 837 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 838 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 839 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 840 | leaf2-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 841 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 842 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 843 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 844 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 845 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 846 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 847 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 848 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 849 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 850 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 851 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 852 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 853 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 854 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 855 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 856 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 857 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 858 | leaf2-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 859 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 860 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 861 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 862 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 863 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 864 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 865 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 866 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 867 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 868 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 869 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 870 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 871 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 872 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 873 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 874 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 875 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 876 | leaf3-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 877 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 878 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 879 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 880 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 881 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 882 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 883 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 884 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 885 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 886 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 887 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 888 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 889 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 890 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 891 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 892 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 893 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 894 | leaf3-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 895 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 896 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 897 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 898 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 899 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 900 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 901 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 902 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 903 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 904 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 905 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 906 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 907 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 908 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 909 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 910 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 911 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 912 | leaf4-DC1 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 913 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.5 | PASS | - |
+| 914 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.5 | PASS | - |
+| 915 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.6 | PASS | - |
+| 916 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.6 | PASS | - |
+| 917 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.1 | PASS | - |
+| 918 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.1 | PASS | - |
+| 919 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.2 | PASS | - |
+| 920 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.2 | PASS | - |
+| 921 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.3 | PASS | - |
+| 922 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.3 | PASS | - |
+| 923 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.4 | PASS | - |
+| 924 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.4 | PASS | - |
+| 925 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.11 | PASS | - |
+| 926 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.11 | PASS | - |
+| 927 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.12 | PASS | - |
+| 928 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.12 | PASS | - |
+| 929 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.101.13 | PASS | - |
+| 930 | leaf4-DC2 | Routing Table | Remote Lo0 address | 192.168.201.13 | PASS | - |
+| 931 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 932 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 933 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 934 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 935 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 936 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 937 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 938 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 939 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 940 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 941 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 942 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 943 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 944 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 945 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 946 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 947 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 948 | borderleaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC1 - 192.168.101.5 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 949 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 950 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 951 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 952 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 953 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 954 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 955 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 956 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 957 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 958 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 959 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 960 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 961 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 962 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 963 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 964 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 965 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 966 | borderleaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf1-DC2 - 192.168.201.5 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 967 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 968 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 969 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 970 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 971 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 972 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 973 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 974 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 975 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 976 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 977 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 978 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 979 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 980 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 981 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 982 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 983 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 984 | borderleaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC1 - 192.168.101.6 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 985 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 986 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 987 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 988 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 989 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 990 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 991 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 992 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 993 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 994 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 995 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 996 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 997 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 998 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 999 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1000 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1001 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1002 | borderleaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: borderleaf2-DC2 - 192.168.201.6 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1003 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1004 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1005 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1006 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1007 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1008 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1009 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1010 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1011 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1012 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1013 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1014 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1015 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1016 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1017 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1018 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1019 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1020 | leaf1-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC1 - 192.168.101.1 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1021 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1022 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1023 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1024 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1025 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1026 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1027 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1028 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1029 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1030 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1031 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1032 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1033 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1034 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1035 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1036 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1037 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1038 | leaf1-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf1-DC2 - 192.168.201.1 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1039 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1040 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1041 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1042 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1043 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1044 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1045 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1046 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1047 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1048 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1049 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1050 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1051 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1052 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1053 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1054 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1055 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1056 | leaf2-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC1 - 192.168.101.2 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1057 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1058 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1059 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1060 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1061 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1062 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1063 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1064 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1065 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1066 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1067 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1068 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1069 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1070 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1071 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1072 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1073 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1074 | leaf2-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf2-DC2 - 192.168.201.2 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1075 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1076 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1077 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1078 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1079 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1080 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1081 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1082 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1083 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1084 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1085 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1086 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1087 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1088 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1089 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1090 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1091 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1092 | leaf3-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC1 - 192.168.101.3 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1093 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1094 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1095 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1096 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1097 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1098 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1099 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1100 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1101 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1102 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1103 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1104 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1105 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1106 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1107 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1108 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1109 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1110 | leaf3-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf3-DC2 - 192.168.201.3 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1111 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1112 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1113 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1114 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1115 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1116 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1117 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1118 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1119 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1120 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1121 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1122 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1123 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1124 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1125 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1126 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1127 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1128 | leaf4-DC1 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC1 - 192.168.101.4 Destination: 192.168.201.13 | FAIL | 100% packet loss |
+| 1129 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.5 | FAIL | 100% packet loss |
+| 1130 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.5 | FAIL | 100% packet loss |
+| 1131 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.6 | FAIL | 100% packet loss |
+| 1132 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.6 | FAIL | 100% packet loss |
+| 1133 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.1 | FAIL | 100% packet loss |
+| 1134 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.1 | FAIL | 100% packet loss |
+| 1135 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.2 | FAIL | 100% packet loss |
+| 1136 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.2 | FAIL | 100% packet loss |
+| 1137 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.3 | FAIL | 100% packet loss |
+| 1138 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.3 | FAIL | 100% packet loss |
+| 1139 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.4 | FAIL | 100% packet loss |
+| 1140 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.4 | FAIL | 100% packet loss |
+| 1141 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.11 | FAIL | 100% packet loss |
+| 1142 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.11 | FAIL | 100% packet loss |
+| 1143 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.12 | FAIL | 100% packet loss |
+| 1144 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.12 | FAIL | 100% packet loss |
+| 1145 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.101.13 | FAIL | 100% packet loss |
+| 1146 | leaf4-DC2 | Loopback0 Reachability | Loopback0 Reachability | Source: leaf4-DC2 - 192.168.201.4 Destination: 192.168.201.13 | FAIL | 100% packet loss |

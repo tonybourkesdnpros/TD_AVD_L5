@@ -8,8 +8,6 @@ router_bgp:
   maximum_paths:
     paths: 4
     ecmp: 4
-  updates:
-    wait_install: true
   peer_groups:
   - name: MLAG-IPv4-UNDERLAY-PEER
     type: ipv4
@@ -91,8 +89,6 @@ router_bgp:
     neighbors:
     - ip_address: 10.255.251.4
       peer_group: MLAG-IPv4-UNDERLAY-PEER
-    updates:
-      wait_install: true
   vlan_aware_bundles:
   - name: VRF_A
     rd: 192.168.101.4:10
@@ -101,7 +97,7 @@ router_bgp:
       - '10:10'
     redistribute_routes:
     - learned
-    vlan: '10'
+    vlan: 10,20
 static_routes:
 - vrf: default
   destination_address_prefix: 0.0.0.0/0
@@ -151,6 +147,9 @@ vlans:
 - id: 10
   name: DMZ
   tenant: ACME
+- id: 20
+  name: Internal
+  tenant: ACME
 - id: 3009
   name: MLAG_iBGP_VRF_A
   trunk_groups:
@@ -174,6 +173,12 @@ vlan_interfaces:
   shutdown: false
   ip_address_virtual: 10.1.10.1/24
   vrf: VRF_A
+- name: Vlan20
+  tenant: ACME
+  description: Internal
+  shutdown: false
+  ip_address_virtual: 10.1.20.1/24
+  vrf: VRF_A
 - name: Vlan3009
   tenant: ACME
   type: underlay_peering
@@ -191,6 +196,14 @@ port_channel_interfaces:
   trunk_groups:
   - LEAF_PEER_L3
   - MLAG
+- name: Port-Channel6
+  description: host2-DC1_PortChannel host1
+  type: switched
+  shutdown: false
+  mode: access
+  vlans: '20'
+  spanning_tree_portfast: edge
+  mlag: 6
 ethernet_interfaces:
 - name: Ethernet1
   peer: leaf3-DC1
@@ -239,8 +252,28 @@ ethernet_interfaces:
   mtu: 1500
   type: routed
   ip_address: 192.168.103.23/31
+- name: Ethernet6
+  peer: host2-DC1
+  peer_interface: Ethernet3
+  peer_type: server
+  description: host2-DC1_Ethernet3
+  shutdown: false
+  type: port-channel-member
+  channel_group:
+    id: 6
+    mode: active
+- name: Ethernet7
+  peer: host2-DC1
+  peer_interface: Ethernet4
+  peer_type: server
+  description: host2-DC1_Ethernet4
+  shutdown: false
+  type: port-channel-member
+  channel_group:
+    id: 6
+    mode: active
 mlag_configuration:
-  domain_id: mlag2
+  domain_id: dc1_mlag2
   local_interface: Vlan4094
   peer_address: 10.255.252.4
   peer_link: Port-Channel1
@@ -294,6 +327,8 @@ vxlan_interface:
       vlans:
       - id: 10
         vni: 10010
+      - id: 20
+        vni: 10020
       vrfs:
       - name: VRF_A
         vni: 10
